@@ -1,0 +1,25 @@
+<!DOCTYPE html us-en>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        <h1 class="status"></h1>
+    </body>
+    <script>
+        function test() {
+            var request = $.get('https://pd.na.a.pvp.net');
+            request.done(function() {
+                $( ".status" ).html( 'SERVER BACK UP' );
+                alert('BACK UP')
+            })
+            request.fail(function() {
+                $( ".status" ).html( 'not yet :(' );   
+            })
+        }
+
+        setInterval(test, 500)
+
+    </script>
+</html>
