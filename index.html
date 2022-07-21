@@ -11,15 +11,23 @@
         function test() {
             var request = $.get('https://pd.na.a.pvp.net');
             request.done(function() {
-                $( ".status" ).html( 'SERVER BACK UP' );
+                $( ".status" ).html( '!!! ✅ SERVER BACK UP ✅ !!!' );
                 alert('BACK UP')
             })
             request.fail(function() {
-                $( ".status" ).html( 'not yet :(' );   
+                $( ".status" ).html( "❌ Riot isn't back up! ❌" );   
             })
         }
 
         setInterval(test, 500)
 
     </script>
+    <style>
+        body {
+            background-color: black;
+            color: azure;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </html>
